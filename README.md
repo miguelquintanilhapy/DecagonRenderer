@@ -45,15 +45,6 @@ Diferente da abordagem tradicional baseada em linhas e formas geométricas pront
 
 ---
 
-## 🧩 Estrutura do Código
-
-* `cor(r, g, b)` → Criação de cor
-* `CriaCor(r, g, b)` → Instanciação de caneta
-* `pintaP(...)` → Renderização de ponto
-* `Paint` → Responsável pelo desenho na tela
-
----
-
 ## 🚀 Tecnologias Utilizadas
 
 * C#
