@@ -91,14 +91,6 @@ dotnet run
 ```
 ---
 
-## 🧪 Como usar
-
-1. Selecione uma cor na ComboBox
-2. Clique em **"Desenhar Decágono"**
-3. O decágono será renderizado na tela
-
----
-
 ## 🧑‍💻 Autores
 
 * Miguel Quintanilha Gomes de Sales
