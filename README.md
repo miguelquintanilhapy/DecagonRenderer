@@ -75,6 +75,38 @@ Diferente da abordagem tradicional baseada em linhas e formas geométricas pront
 Este projeto demonstra, na prática, como formas geométricas complexas podem ser construídas a partir de elementos extremamente simples (**pontos**), utilizando conceitos matemáticos e probabilísticos — uma abordagem pouco convencional, porém poderosa.
 
 ---
+## ▶️ Como Executar
+
+### ✅ Pré-requisitos
+
+* .NET instalado (recomendado .NET 6 ou superior)
+* Windows (projeto utiliza Windows Forms)
+
+---
+
+### 🚀 Executando o projeto
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/miguelquintanilhapy/DecagonRenderer.git
+```
+2. Acesse a pasta do projeto:
+```bash
+cd ProjetoICG1Bim
+```
+3. Execute a aplicação:
+```bash
+dotnet run
+```
+---
+
+## 🧪 Como usar
+
+1. Selecione uma cor na ComboBox
+2. Clique em **"Desenhar Decágono"**
+3. O decágono será renderizado na tela
+
+---
 
 ## 🧑‍💻 Autores
 
