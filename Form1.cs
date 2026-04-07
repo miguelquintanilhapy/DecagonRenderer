@@ -18,7 +18,6 @@ namespace WindowsFormsApp1
         }
 
         //  PRIMITIVAS DO PROFESSOR 
-
         public Color cor(int r, int g, int b)
         {
             return Color.FromArgb(r, g, b);
@@ -35,7 +34,6 @@ namespace WindowsFormsApp1
         }
 
         //  INTERFACE 
-
         private void InitializeComponent()
         {
             cboCor = new ComboBox();
@@ -52,7 +50,6 @@ namespace WindowsFormsApp1
             cboCor.Size = new Size(150, 25);
             cboCor.SelectedIndex = 0;
 
-            // Botão
             btnDesenhar.Location = new Point(170, 10);
             btnDesenhar.Size = new Size(150, 25);
             btnDesenhar.Text = "Desenhar Decágono";
@@ -67,16 +64,14 @@ namespace WindowsFormsApp1
             ResumeLayout(false);
         }
 
-        //BOTÃO 
-
+        //Button click
         private void btnDesenhar_Click(object sender, EventArgs e)
         {
             desenhar = true;
             this.Invalidate(); // força redesenho
         }
 
-        // PAINT
-
+        // Paint
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             if (desenhar == false) return;
