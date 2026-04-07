@@ -33,6 +33,12 @@ namespace WindowsFormsApp1
             e.Graphics.DrawLine(caneta, x, y, x + 1, y);
         }
 
+        // FUNÇÃO MODULO - CONFORME ENUNCIADO
+        public float Modulo(float a, float b)
+        {
+            return (a % b + b) % b;
+        }
+
         //  INTERFACE 
         private void InitializeComponent()
         {
@@ -93,26 +99,25 @@ namespace WindowsFormsApp1
 
             for (int i = 0; i < tentativas; i++)
             {
-                // Bounding box
+                //  Translação para o espaço de objeto
                 int px = rnd.Next(centroX - R, centroX + R);
                 int py = rnd.Next(centroY - R, centroY + R);
 
-                // Translação
                 float dx = px - centroX;
                 float dy = py - centroY;
 
-                // Polares
+                //  Conversão para coordenadas polares
                 float r = (float)Math.Sqrt(dx * dx + dy * dy);
                 float theta = (float)Math.Atan2(dy, dx);
 
-                // Redução de simetria
+                //  Redução de simetria 
                 float seccao = (float)(2.0 * Math.PI / n);
-                float alpha = (float)(((theta % seccao + seccao) % seccao) - (seccao / 2.0));
+                float alpha = (float)(Modulo(theta, seccao) - (seccao / 2.0));
 
-                // Raio limite
+                //  Cálculo do raio limite
                 float d_max = (float)(R * Math.Cos(Math.PI / n) / Math.Cos(alpha));
 
-                // Teste e desenho
+                //  Teste de inclusão e renderização
                 if (r <= d_max)
                 {
                     pintaP(e, caneta, px, py);
