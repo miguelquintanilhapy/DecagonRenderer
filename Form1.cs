@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             this.WindowState = FormWindowState.Maximized;
         }
 
-        // ===================== PRIMITIVAS DO PROFESSOR =====================
+        //  PRIMITIVAS DO PROFESSOR 
 
         public Color cor(int r, int g, int b)
         {
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             e.Graphics.DrawLine(caneta, x, y, x + 1, y);
         }
 
-        // ===================== INTERFACE =====================
+        //  INTERFACE 
 
         private void InitializeComponent()
         {
@@ -42,7 +42,6 @@ namespace WindowsFormsApp1
             btnDesenhar = new Button();
             SuspendLayout();
 
-            // ComboBox
             cboCor.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCor.Items.AddRange(new object[]
             {
@@ -59,19 +58,16 @@ namespace WindowsFormsApp1
             btnDesenhar.Text = "Desenhar Decágono";
             btnDesenhar.Click += btnDesenhar_Click;
 
-            // Form
             ClientSize = new Size(800, 800);
             Controls.Add(cboCor);
             Controls.Add(btnDesenhar);
             Text = "Decágono - Monte Carlo";
-
-            // EVENTO VIA DESIGNER (raiozinho)
             Paint += Form1_Paint;
 
             ResumeLayout(false);
         }
 
-        // ===================== BOTÃO =====================
+        //BOTÃO 
 
         private void btnDesenhar_Click(object sender, EventArgs e)
         {
@@ -79,12 +75,11 @@ namespace WindowsFormsApp1
             this.Invalidate(); // força redesenho
         }
 
-        // ===================== PAINT (OFICIAL) =====================
+        // PAINT
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            if (!desenhar) return;
-
+            if (desenhar == false) return;
             Pen caneta = null;
 
             if (cboCor.SelectedItem.ToString() == "Vermelho") caneta = CriaCor(255, 0, 0);
